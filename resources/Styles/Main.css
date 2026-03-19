@@ -1,0 +1,23 @@
+.btn-signin {
+    -fx-background-color: #e50914;
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(229,9,20,0.35), 8, 0.4, 0, 2);
+}
+
+/* HOVER GLOW */
+.btn-signin:hover {
+    -fx-background-color: #ff1f2f;
+    -fx-effect: dropshadow(gaussian, rgba(255,40,40,0.9), 22, 0.6, 0, 0);
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+}
+
+/* CLICK EFFECT */
+.btn-signin:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
