@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="UI.Common.CommonControllers.ManageMoviesController"
+            stylesheets="@/Styles/admin-login.css">
+
+    <top>
+        <HBox alignment="CENTER_RIGHT"
+              spacing="20"
+              style="-fx-background-color: #0f0f14;">
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button text="Back"
+                    styleClass="menu-button"
+                    onAction="#handleBack"/>
+
+        </HBox>
+    </top>
+
+    <center>
+        <StackPane style="-fx-background-color: #111827;">
+
+            <VBox spacing="30"
+                  alignment="CENTER">
+
+                <Label text="Manage Movies"
+                       style="-fx-text-fill: white;
+                              -fx-font-size: 28px;
+                              -fx-font-weight: bold;"/>
+
+                <Separator prefWidth="300"/>
+
+                <Button text="Add Movie"
+                        prefWidth="250"
+                        prefHeight="45"
+                        styleClass="menu-button"
+                        onAction="#handleAddMovie"/>
+
+                <Button text="Delete Movie"
+                        prefWidth="250"
+                        prefHeight="45"
+                        styleClass="menu-button"
+                        onAction="#handleDeleteMovie"/>
+
+                <Button text="Update Movie"
+                        prefWidth="250"
+                        prefHeight="45"
+                        styleClass="menu-button"
+                        onAction="#handleUpdateMovie"/>
+
+            </VBox>
+
+        </StackPane>
+    </center>
+
+</BorderPane>

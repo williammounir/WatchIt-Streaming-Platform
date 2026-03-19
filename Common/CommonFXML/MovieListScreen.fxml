@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefWidth="1000" prefHeight="650"
+            style="-fx-background-color: #0f0f0f;"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="UI.Common.CommonControllers.MovieListScreenController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15"
+              style="-fx-background-color: #181818; -fx-padding: 12 20;">
+
+            <Button text="← Back"
+                    fx:id="backBtn"
+                    onAction="#onBack"
+                    styleClass="menu-button"/>
+
+            <Label fx:id="screenTitle"
+                   text="Movies"
+                   style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true"
+                    style="-fx-background: transparent; -fx-background-color: transparent;"
+                    vbarPolicy="AS_NEEDED">
+
+            <content>
+                <FlowPane fx:id="moviesFlowPane"
+                          hgap="18"
+                          vgap="18"
+                          padding="20"
+                          prefWrapLength="900"
+                          alignment="TOP_LEFT"/>
+            </content>
+
+        </ScrollPane>
+    </center>
+
+</BorderPane>

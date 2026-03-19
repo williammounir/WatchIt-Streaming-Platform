@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="rootPane" styleClass="root" stylesheets="@/Styles/admin-login.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Common.CommonControllers.User_Signup_Controller">
+
+    <ImageView fx:id="backgroundImageView" preserveRatio="false" smooth="true">
+        <image>
+            <Image url="@/Images/LoginBack.jpg" />
+        </image>
+    </ImageView>
+
+    <StackPane maxHeight="Infinity" maxWidth="Infinity" style="-fx-background-color: rgba(0,0,0,0.55);" />
+
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" style="-fx-background: transparent; -fx-background-color: transparent;" vbarPolicy="AS_NEEDED">
+
+        <content>
+
+            <VBox alignment="TOP_CENTER" spacing="25" style="-fx-padding: 40 0 40 0;" styleClass="content-container">
+
+                <ImageView fitHeight="90" preserveRatio="true">
+                    <image>
+                        <Image url="@/Images/logo2.jpg" />
+                    </image>
+                </ImageView>
+
+                <Label styleClass="subtitle-label" text="Create Your Account" textFill="WHITE">
+                    <font><Font size="26" /></font>
+                </Label>
+
+                <VBox alignment="CENTER" prefWidth="430" spacing="12" styleClass="login-card">
+
+                    <Label fx:id="MessageLabel" styleClass="card-title" text="Join Watch It" />
+
+                    <TextField fx:id="UsernameField" prefWidth="320" promptText="Username" styleClass="input-field" />
+
+                    <TextField fx:id="FirstNameField" prefWidth="320" promptText="First Name" styleClass="input-field" />
+
+                    <TextField fx:id="LastNameField" prefWidth="320" promptText="Last Name" styleClass="input-field" />
+
+                    <DatePicker fx:id="BirthDatePicker" prefWidth="320" promptText="BirthDate" styleClass="input-field" />
+
+                    <ComboBox fx:id="GenderBox" prefWidth="320" promptText="Gender" styleClass="input-field" />
+
+                    <TextField fx:id="EmailField" prefWidth="320" promptText="Email" styleClass="input-field" />
+
+                    <PasswordField fx:id="PasswordField" prefWidth="320" promptText="Password" styleClass="input-field" />
+
+                    <PasswordField fx:id="ConfirmPasswordField" prefWidth="320" promptText="Confirm Password" styleClass="input-field" />
+
+                    <Label text="Select Plan" textFill="WHITE" />
+                    <ChoiceBox fx:id="PlanChoiceBox" prefWidth="320" />
+
+                    <Button fx:id="CreateAccountBtn" mnemonicParsing="false" onAction="#CreateAccount" prefWidth="230" styleClass="btn-signin" text="CREATE ACCOUNT" />
+
+                    <Button fx:id="BackBtn" mnemonicParsing="false" onAction="#ReturnToUserAuth" prefWidth="230" styleClass="btn-signin" text="BACK" />
+
+                </VBox>
+
+                <Label styleClass="restricted-notice" text="AWWIA" textFill="#bbbbbb" />
+
+            </VBox>
+
+        </content>
+
+    </ScrollPane>
+
+</StackPane>

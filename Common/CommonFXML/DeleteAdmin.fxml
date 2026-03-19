@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="UI.Common.CommonControllers.DeleteAdminController"
+      spacing="20"
+      alignment="TOP_CENTER"
+      style="-fx-background-color: #111827;">
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <Label text="Delete Admin"
+           style="-fx-text-fill: white;
+                  -fx-font-size: 26px;
+                  -fx-font-weight: bold;"/>
+
+    <Separator/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="txtUsername"
+                   promptText="Enter Username"
+                   prefWidth="250"/>
+        <Button text="Search"
+                onAction="#handleSearch"
+                styleClass="menu-button"/>
+    </HBox>
+
+    <GridPane fx:id="adminInfoPane"
+              hgap="15"
+              vgap="10"
+              visible="false">
+
+        <Label text="Full Name:" style="-fx-text-fill: white;" GridPane.rowIndex="0"/>
+        <Label fx:id="lblFullName" style="-fx-text-fill: white;" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Email:" style="-fx-text-fill: white;" GridPane.rowIndex="1"/>
+        <Label fx:id="lblEmail" style="-fx-text-fill: white;" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Birth Date:" style="-fx-text-fill: white;" GridPane.rowIndex="2"/>
+        <Label fx:id="lblBirthDate" style="-fx-text-fill: white;" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Gender:" style="-fx-text-fill: white;" GridPane.rowIndex="3"/>
+        <Label fx:id="lblGender" style="-fx-text-fill: white;" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    </GridPane>
+
+    <TextArea fx:id="txtDescription"
+              promptText="Operation Description..."
+              prefRowCount="3"
+              prefWidth="400"
+              visible="false"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="btnDelete"
+                text="Delete"
+                visible="false"
+                onAction="#handleDelete"
+                styleClass="top-bar-red-button"/>
+    </HBox>
+
+</VBox>

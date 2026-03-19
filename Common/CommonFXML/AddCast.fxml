@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="UI.Common.CommonControllers.AddCastController"
+            stylesheets="@/Styles/admin-login.css">
+
+
+    <top>
+        <HBox alignment="CENTER_RIGHT"
+              spacing="20"
+              style="-fx-background-color: #0f0f14;">
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+
+        </HBox>
+    </top>
+
+
+    <center>
+        <ScrollPane fitToWidth="true"
+                    style="-fx-background: #111827;">
+            <VBox spacing="20"
+                  alignment="CENTER"
+                  style="-fx-background-color: #111827;">
+                <padding>
+                    <Insets top="30" right="40" bottom="30" left="40"/>
+                </padding>
+
+                <Label text="Add Cast"
+                       style="-fx-text-fill: white;
+                              -fx-font-size: 26px;
+                              -fx-font-weight: bold;"/>
+
+                <Separator prefWidth="400"/>
+
+                <TextField fx:id="txtID"
+                           promptText="Cast ID"
+                           prefWidth="300"/>
+
+                <TextField fx:id="txtFirstName"
+                           promptText="First Name"
+                           prefWidth="300"/>
+
+                <TextField fx:id="txtLastName"
+                           promptText="Last Name"
+                           prefWidth="300"/>
+
+                <DatePicker fx:id="dateBirth"
+                            prefWidth="300"/>
+
+                <ComboBox fx:id="comboGender"
+                          promptText="Select Gender"
+                          prefWidth="300"/>
+
+                <TextField fx:id="txtNationality"
+                           promptText="Nationality"
+                           prefWidth="300"/>
+
+                <TextField fx:id="txtSocialLink"
+                           promptText="Social Media Link"
+                           prefWidth="300"/>
+
+                <TextArea fx:id="txtDescription"
+                          promptText="Operation Description"
+                          prefWidth="400"
+                          prefRowCount="3"/>
+
+                <HBox spacing="20" alignment="CENTER">
+                    <Button text="Save"
+                            styleClass="menu-button"
+                            onAction="#handleSave"/>
+
+                    <Button text="Cancel"
+                            styleClass="top-bar-red-button"
+                            onAction="#handleCancel"/>
+                </HBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

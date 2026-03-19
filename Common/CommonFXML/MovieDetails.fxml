@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="rootPane" xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="UI.Common.CommonControllers.MovieDetailsController"
+           stylesheets="@/Styles/admin-login.css">
+
+    <ImageView fx:id="backgroundImage" preserveRatio="false">
+        <image>
+            <Image url="@/Images/pexels-ibnulharezmi-17082082.jpg"/>
+        </image>
+    </ImageView>
+
+    <StackPane style="-fx-background-color: rgba(0,0,0,0.6);" />
+
+    <VBox alignment="CENTER" spacing="20" maxWidth="700"
+          styleClass="login-card" style="-fx-padding: 25;">
+
+        <ImageView fx:id="posterImage" fitHeight="220" preserveRatio="true"/>
+
+        <Label fx:id="titleLabel" styleClass="card-title"/>
+
+        <Label fx:id="infoLabel" wrapText="true"/>
+
+        <TextArea fx:id="descriptionArea" editable="false" wrapText="true"
+                  prefHeight="120"/>
+
+        <Label fx:id="castLabel" wrapText="true"/>
+
+        <Label fx:id="directorLabel"/>
+
+        <HBox alignment="CENTER" spacing="15">
+            <Button text="WATCH" onAction="#onWatch" styleClass="btn-signin"/>
+            <Button text="BACK" onAction="#onBack" styleClass="btn-signin"/>
+        </HBox>
+
+    </VBox>
+
+</StackPane>

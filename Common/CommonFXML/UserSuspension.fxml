@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="UI.Common.CommonControllers.UserSuspensionController"
+            stylesheets="@/Styles/admin-login.css"
+            styleClass="root">
+
+
+    <fx:define>
+        <ToggleGroup fx:id="actionGroup"/>
+    </fx:define>
+
+    <top>
+        <VBox alignment="CENTER" spacing="10" styleClass="content-container">
+
+            <Label text="User Suspension Management"
+                   style="-fx-font-size:26px; -fx-font-weight:bold; -fx-text-fill:white;"/>
+
+        </VBox>
+    </top>
+
+
+    <center>
+
+        <VBox spacing="25"
+              alignment="TOP_CENTER"
+              styleClass="content-container">
+
+
+
+            <VBox spacing="8" alignment="CENTER_LEFT">
+
+                <Label text="User ID"
+                       styleClass="card-title"/>
+
+                <TextField fx:id="txtUserID"
+                           promptText="Enter User ID"
+                           styleClass="input-field"/>
+
+            </VBox>
+
+            <VBox spacing="10" alignment="CENTER_LEFT">
+
+                <Label text="Action"
+                       styleClass="card-title"/>
+
+                <HBox spacing="20">
+
+                    <RadioButton fx:id="rbSuspend"
+                                 text="Suspend User"
+                                 toggleGroup="$actionGroup"
+                                 onAction="#onSuspendSelected"
+                                 style="-fx-text-fill:white;"/>
+
+                    <RadioButton fx:id="rbWithdraw"
+                                 text="Withdraw Suspension"
+                                 toggleGroup="$actionGroup"
+                                 onAction="#onWithdrawSelected"
+                                 style="-fx-text-fill:white;"/>
+
+                </HBox>
+
+            </VBox>
+
+
+            <VBox spacing="8" alignment="CENTER_LEFT">
+
+                <Label text="Suspension End Date"
+                       styleClass="card-title"/>
+
+                <DatePicker fx:id="dateEnd"
+                            prefWidth="280"/>
+
+            </VBox>
+
+
+            <VBox spacing="8" alignment="CENTER_LEFT">
+
+                <Label text="Suspension Reason"
+                       styleClass="card-title"/>
+
+                <TextArea fx:id="txtReason"
+                          promptText="Enter suspension reason..."
+                          prefRowCount="4"
+                          prefWidth="300"/>
+
+            </VBox>
+
+
+
+            <HBox spacing="20" alignment="CENTER">
+
+                <Button text="Apply Action"
+                        styleClass="top-bar-red-button"
+                        onAction="#onApplyAction"/>
+
+                <Button text="Back"
+                        styleClass="menu-button"
+                        onAction="#onBack"/>
+
+            </HBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

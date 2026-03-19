@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" stylesheets="@../../resources/Styles/Main.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Common.CommonControllers.MainController">
+
+
+    <ImageView fx:id="backgroundImageView" preserveRatio="false" smooth="true">
+        <image>
+            <Image url="@/Images/background2.jpg" />
+        </image>
+    </ImageView>
+
+
+    <Rectangle fill="black" opacity="0.45" />
+
+
+    <StackPane maxHeight="480" maxWidth="460" style="-fx-background-color: rgba(15, 15, 25, 0.62);                       -fx-background-radius: 24;                       -fx-border-color: rgba(255,255,255,0.07);                       -fx-border-radius: 24;                       -fx-border-width: 1;                       -fx-effect: dropshadow(gaussian, black, 30, 0.4, 0, 12);">
+
+        <VBox alignment="CENTER" spacing="28" style="-fx-padding: 50 40;">
+
+            <ImageView fitHeight="120" preserveRatio="true">
+                <image>
+                    <Image url="@/Images/logo2.jpg" />
+                </image>
+            </ImageView>
+
+            <Label style="-fx-font-weight: bold;" text="WATCH IT" textFill="#ff2a2a">
+                <font>
+                    <Font size="42.0" />
+                </font>
+            </Label>
+
+            <Label text="Watch It. Live It." textFill="#ff4d4d">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+
+            <HBox alignment="CENTER" spacing="30">
+                <Button fx:id="adminBtn" onAction="#AdminButton" prefHeight="52" prefWidth="170" style="-fx-background-color: #e50914;                                -fx-background-radius: 30;                                -fx-font-size: 15px;                                -fx-font-weight: bold;" styleClass="btn-signin" text="ADMIN" textFill="WHITE" />
+
+                <Button fx:id="userBtn" onAction="#UserButton" prefHeight="52" prefWidth="170" style="-fx-background-color: #e50914;                                -fx-background-radius: 30;                                -fx-font-size: 15px;                                -fx-font-weight: bold;" styleClass="btn-signin" text="USER" textFill="WHITE" />
+
+                <Button fx:id="exitBtn" onAction="#ExitButton" prefHeight="52" prefWidth="170" style="-fx-background-color: #e50914;                                -fx-background-radius: 30;                                -fx-font-size: 15px;                                -fx-font-weight: bold;" styleClass="btn-signin" text="EXIT" textFill="WHITE" />
+            </HBox>
+
+        </VBox>
+    </StackPane>
+
+</StackPane>

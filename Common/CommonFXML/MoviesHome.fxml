@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<StackPane fx:id="rootPane"
+           xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="UI.Common.CommonControllers.MoviesHomeController"
+           styleClass="root"
+           stylesheets="@/Styles/admin-login.css">
+
+    <ImageView fx:id="backgroundImageView"
+               preserveRatio="false"
+               smooth="true"
+               StackPane.alignment="CENTER"
+               opacity="0.25">
+        <image>
+            <Image url="@/Images/pexels-ibnulharezmi-17082082.jpg" />
+        </image>
+    </ImageView>
+
+    <BorderPane>
+
+
+        <top>
+            <StackPane style="-fx-padding: 30 0 20 0;">
+
+                <HBox alignment="CENTER_LEFT"
+                      spacing="20"
+                      maxWidth="900"
+                      style="
+    -fx-background-color: linear-gradient(to right, #111827, #0f172a);
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-color: rgba(255,255,255,0.08);
+    -fx-border-width: 1;
+    -fx-padding: 18 35 18 35;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 25, 0.4, 0, 8);
+     ">
+
+                    <ImageView fitHeight="35" preserveRatio="true">
+                        <image>
+                            <Image url="@/Images/logo2.jpg"/>
+                        </image>
+                    </ImageView>
+
+                    <Label fx:id="welcomeLabel"
+                           text="Welcome, William"
+                           style="-fx-text-fill: white;
+                          -fx-font-size: 20px;
+                          -fx-font-weight: bold;"
+                           HBox.hgrow="ALWAYS"/>
+
+                    <Button text="Search"
+                            onAction="#onOpenSearch"
+                            styleClass="top-bar-red-button"/>
+
+                    <Button text="Profile"
+                            onAction="#onProfile"
+                            styleClass="top-bar-red-button"/>
+
+                    <Button text="Logout"
+                            onAction="#onLogout"
+                            styleClass="top-bar-red-button"/>
+
+                </HBox>
+            </StackPane>
+        </top>
+
+        <center>
+            <ScrollPane fitToWidth="true"
+                        style="-fx-background-color: transparent;"
+                        VBox.vgrow="ALWAYS">
+
+                <VBox spacing="35"
+                      style="-fx-padding: 25; -fx-background-color: transparent;">
+
+                    <VBox spacing="10">
+                        <Label text="🔥 Top Rated"
+                               style="-fx-text-fill: white; -fx-font-size: 18px;"/>
+                        <ScrollPane hbarPolicy="AS_NEEDED"
+                                    vbarPolicy="NEVER"
+                                    fitToHeight="true">
+                            <HBox fx:id="topRatedBox" spacing="15"/>
+                        </ScrollPane>
+                    </VBox>
+
+                    <VBox spacing="10">
+                        <Label text="🆕 Recently Added"
+                               style="-fx-text-fill: white; -fx-font-size: 18px;"/>
+                        <ScrollPane hbarPolicy="AS_NEEDED"
+                                    vbarPolicy="NEVER"
+                                    fitToHeight="true">
+                            <HBox fx:id="recentBox" spacing="15"/>
+                        </ScrollPane>
+                    </VBox>
+
+                    <VBox spacing="10">
+                        <Label text="⭐ Recommended For You"
+                               style="-fx-text-fill: white; -fx-font-size: 18px;"/>
+                        <ScrollPane hbarPolicy="AS_NEEDED"
+                                    vbarPolicy="NEVER"
+                                    fitToHeight="true">
+                            <HBox fx:id="recommendedBox" spacing="15"/>
+                        </ScrollPane>
+                    </VBox>
+
+                    <VBox spacing="10">
+                        <Label text="🎬 Action"
+                               style="-fx-text-fill: white; -fx-font-size: 18px;"/>
+                        <ScrollPane hbarPolicy="AS_NEEDED"
+                                    vbarPolicy="NEVER"
+                                    fitToHeight="true">
+                            <HBox fx:id="actionBox" spacing="15"/>
+                        </ScrollPane>
+                    </VBox>
+
+                    <VBox spacing="10">
+                        <Label text="😂 Comedy"
+                               style="-fx-text-fill: white; -fx-font-size: 18px;"/>
+                        <ScrollPane hbarPolicy="AS_NEEDED"
+                                    vbarPolicy="NEVER"
+                                    fitToHeight="true">
+                            <HBox fx:id="comedyBox" spacing="15"/>
+                        </ScrollPane>
+                    </VBox>
+
+                </VBox>
+            </ScrollPane>
+        </center>
+
+    </BorderPane>
+</StackPane>

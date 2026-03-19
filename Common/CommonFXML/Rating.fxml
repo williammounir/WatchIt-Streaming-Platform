@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<StackPane fx:id="rootPane"
+           xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="UI.Common.CommonControllers.RatingController"
+           style="-fx-background-color: black;">
+
+    <ImageView fx:id="backgroundImage"
+               opacity="0.20"
+               preserveRatio="false">
+        <image>
+            <Image url="@/Images/background2.jpg"/>
+        </image>
+    </ImageView>
+
+    <VBox alignment="CENTER"
+          spacing="18"
+          maxWidth="420"
+          style="-fx-background-color: rgba(0,0,0,0.65);
+                 -fx-padding: 25;
+                 -fx-background-radius: 12;">
+
+        <Label text="Rate this Movie"
+               style="-fx-text-fill: white;
+                      -fx-font-size: 22px;
+                      -fx-font-weight: bold;" />
+
+        <ImageView fx:id="posterImage"
+                   fitWidth="220"
+                   fitHeight="320"
+                   preserveRatio="true"
+                   smooth="true"
+                   style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 20,0,0,0);" />
+
+
+        <Label fx:id="movieTitle"
+               wrapText="true"
+               textAlignment="CENTER"
+               style="-fx-text-fill: white;
+                      -fx-font-size: 16px;
+                      -fx-font-weight: bold;" />
+
+        <HBox alignment="CENTER" spacing="8">
+
+            <Button text="★" fx:id="star1" onAction="#rate1"
+                    style="-fx-font-size: 24px; -fx-text-fill: gray; -fx-background-color: transparent;"/>
+            <Button text="★" fx:id="star2" onAction="#rate2"
+                    style="-fx-font-size: 24px; -fx-text-fill: gray; -fx-background-color: transparent;"/>
+            <Button text="★" fx:id="star3" onAction="#rate3"
+                    style="-fx-font-size: 24px; -fx-text-fill: gray; -fx-background-color: transparent;"/>
+            <Button text="★" fx:id="star4" onAction="#rate4"
+                    style="-fx-font-size: 24px; -fx-text-fill: gray; -fx-background-color: transparent;"/>
+            <Button text="★" fx:id="star5" onAction="#rate5"
+                    style="-fx-font-size: 24px; -fx-text-fill: gray; -fx-background-color: transparent;"/>
+
+        </HBox>
+
+        <Label fx:id="ratingLabel"
+               text="Your rating: 0 / 5"
+               style="-fx-text-fill: #cccccc;
+                      -fx-font-size: 13px;" />
+
+        <Button text="Submit Rating"
+                fx:id="submitBtn"
+                onAction="#onSubmit"
+                prefWidth="180"
+                style="-fx-background-color: #e50914;
+                       -fx-text-fill: white;
+                       -fx-font-size: 14px;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 8;" />
+
+        <Button text="Skip"
+                onAction="#onSkip"
+                style="-fx-background-color: transparent;
+                       -fx-text-fill: #aaaaaa;" />
+
+    </VBox>
+
+</StackPane>

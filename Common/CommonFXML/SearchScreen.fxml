@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane fx:id="rootPane"
+           xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="UI.Common.CommonControllers.SearchScreenController"
+           styleClass="root"
+           stylesheets="@/Styles/admin-login.css">
+
+    <!-- Background -->
+    <ImageView fx:id="backgroundImageView" preserveRatio="false">
+        <image>
+            <Image url="@/Images/background2.jpg"/>
+        </image>
+    </ImageView>
+
+    <Pane style="-fx-background-color: rgba(0,0,0,0.6);" />
+
+    <VBox spacing="20" alignment="TOP_CENTER">
+        <padding>
+            <Insets top="25" right="25" bottom="25" left="25"/>
+        </padding>
+
+        <Button text="← Back"
+                onAction="#onBack"
+                styleClass="btn-signin"
+                prefWidth="120"/>
+
+        <HBox spacing="10" alignment="CENTER">
+
+            <TextField fx:id="searchField"
+                       promptText="Search movie, actor, director..."
+                       prefWidth="280"
+                       styleClass="input-field"/>
+
+            <ComboBox fx:id="genreBox" promptText="Genre" prefWidth="120"/>
+            <ComboBox fx:id="languageBox" promptText="Language" prefWidth="120"/>
+            <ComboBox fx:id="ratingBox" promptText="Min Rating" prefWidth="110"/>
+
+            <Button text="SEARCH"
+                    onAction="#onSearch"
+                    styleClass="btn-signin"
+                    prefWidth="120"/>
+
+            <Button text="CLEAR"
+                    onAction="#onClear"
+                    styleClass="btn-signin"
+                    prefWidth="120"/>
+        </HBox>
+
+        <ScrollPane fitToWidth="true" style="-fx-background: transparent;">
+            <content>
+                <FlowPane fx:id="resultsPane"
+                          hgap="20"
+                          vgap="20"
+                          alignment="TOP_CENTER">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                </FlowPane>
+            </content>
+        </ScrollPane>
+
+        <Label fx:id="emptyLabel"
+               text="No results found"
+               visible="false"
+               textFill="white"
+               style="-fx-font-size: 16px;"/>
+
+    </VBox>
+
+</StackPane>

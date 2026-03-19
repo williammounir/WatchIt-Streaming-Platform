@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="UI.Common.CommonControllers.DeleteDirectorController"
+      spacing="20"
+      alignment="TOP_CENTER"
+      style="-fx-background-color: #111827;"
+      prefWidth="600">
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <Label text="Delete Director"
+           style="-fx-text-fill: white;
+                  -fx-font-size: 26px;
+                  -fx-font-weight: bold;"/>
+
+    <Separator/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="txtSearchID"
+                   promptText="Enter Director ID"
+                   prefWidth="250"/>
+        <Button text="Search"
+                onAction="#handleSearch"
+                styleClass="menu-button"/>
+    </HBox>
+
+    <GridPane fx:id="infoPane"
+              hgap="15"
+              vgap="15"
+              visible="false">
+
+        <Label text="Full Name:" style="-fx-text-fill: white;" GridPane.rowIndex="0"/>
+        <Label fx:id="lblFullName" style="-fx-text-fill: white;" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Birth Date:" style="-fx-text-fill: white;" GridPane.rowIndex="1"/>
+        <Label fx:id="lblBirthDate" style="-fx-text-fill: white;" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Gender:" style="-fx-text-fill: white;" GridPane.rowIndex="2"/>
+        <Label fx:id="lblGender" style="-fx-text-fill: white;" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Nationality:" style="-fx-text-fill: white;" GridPane.rowIndex="3"/>
+        <Label fx:id="lblNationality" style="-fx-text-fill: white;" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Social Media:" style="-fx-text-fill: white;" GridPane.rowIndex="4"/>
+        <Label fx:id="lblSocialMedia" style="-fx-text-fill: white;" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    </GridPane>
+
+    <Label text="Description:"
+           style="-fx-text-fill: white;"
+           visible="false"
+           fx:id="lblDescription"/>
+
+    <TextArea fx:id="txtDescription"
+              prefRowCount="3"
+              visible="false"/>
+
+    <Button fx:id="btnDelete"
+            text="Confirm Delete"
+            visible="false"
+            onAction="#handleDelete"
+            styleClass="top-bar-red-button"/>
+
+</VBox>

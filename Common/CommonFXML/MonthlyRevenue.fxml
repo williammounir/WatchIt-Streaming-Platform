@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="UI.Common.CommonControllers.MonthlyRevenueController"
+            stylesheets="@/Styles/admin-login.css">
+
+    <top>
+        <HBox alignment="CENTER_RIGHT"
+              spacing="20"
+              style="-fx-background-color:#0f0f14;">
+
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button text="Back"
+                    styleClass="menu-button"
+                    onAction="#handleBack"/>
+        </HBox>
+    </top>
+
+    <center>
+
+        <VBox spacing="25"
+              alignment="TOP_CENTER"
+              style="-fx-background-color:#111827;">
+
+            <padding>
+                <Insets top="30" bottom="40" left="40" right="40"/>
+            </padding>
+
+            <Label text="Monthly Revenue Report"
+                   style="-fx-text-fill:white;
+                          -fx-font-size:28;
+                          -fx-font-weight:bold;"/>
+
+            <TableView fx:id="revenueTable"
+                       prefWidth="400">
+
+                <columns>
+
+                    <TableColumn fx:id="monthColumn"
+                                 text="Month"
+                                 prefWidth="200"/>
+
+                    <TableColumn fx:id="revenueColumn"
+                                 text="Revenue"
+                                 prefWidth="200"/>
+
+                </columns>
+
+            </TableView>
+
+            <VBox spacing="10" alignment="CENTER">
+
+                <Label fx:id="totalRevenueLabel"
+                       style="-fx-text-fill:white; -fx-font-size:16;"/>
+
+                <Label fx:id="highestMonthLabel"
+                       style="-fx-text-fill:white; -fx-font-size:16;"/>
+
+                <Label fx:id="lowestMonthLabel"
+                       style="-fx-text-fill:white; -fx-font-size:16;"/>
+
+            </VBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

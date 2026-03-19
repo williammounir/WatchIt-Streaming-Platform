@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="UI.Common.CommonControllers.ProfileScreenController"
+           styleClass="root"
+           stylesheets="@/Styles/admin-login.css">
+
+    <ImageView fitWidth="1920"
+               fitHeight="1080"
+               preserveRatio="false"
+               opacity="0.25">
+        <image>
+            <Image url="@/Images/background2.jpg"/>
+        </image>
+    </ImageView>
+
+    <BorderPane>
+
+        <top>
+            <HBox alignment="CENTER_LEFT"
+                  style="-fx-padding: 30 40 10 40;">
+
+                <Button fx:id="backButton"
+                        text="← Back"
+                        styleClass="top-bar-red-button"/>
+            </HBox>
+        </top>
+
+        <center>
+            <ScrollPane fitToWidth="true"
+                        style="-fx-background-color: transparent;">
+
+                <VBox alignment="TOP_CENTER"
+                      spacing="50"
+                      style="-fx-padding: 40 0 70 0;">
+
+                    <VBox spacing="18"
+                          alignment="CENTER"
+                          styleClass="login-card"
+                          maxWidth="450">
+
+                        <ImageView fx:id="profileImage"
+                                   fitHeight="120"
+                                   fitWidth="120"
+                                   preserveRatio="true"/>
+
+                        <Label fx:id="nameLabel"
+                               style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+                        <Label fx:id="emailLabel"
+                               style="-fx-text-fill: #cccccc; -fx-font-size: 14px;"/>
+
+                        <Label fx:id="memberSinceLabel"
+                               style="-fx-text-fill: #aaaaaa; -fx-font-size: 13px;"/>
+
+                        <Button fx:id="editProfileBtn"
+                                text="Edit Profile"
+                                styleClass="top-bar-red-button"/>
+                    </VBox>
+
+                    <HBox spacing="30"
+                          alignment="CENTER">
+
+                        <VBox alignment="CENTER"
+                              spacing="10"
+                              styleClass="login-card"
+                              maxWidth="220">
+
+                            <Label text="Movies Watched"
+                                   style="-fx-text-fill: #bbbbbb;"/>
+                            <Label fx:id="moviesWatchedLabel"
+                                   style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;"/>
+                        </VBox>
+
+                        <VBox alignment="CENTER"
+                              spacing="10"
+                              styleClass="login-card"
+                              maxWidth="220">
+
+                            <Label text="Favorite Genre"
+                                   style="-fx-text-fill: #bbbbbb;"/>
+                            <Label fx:id="favoriteGenreLabel"
+                                   style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+                        </VBox>
+
+                        <VBox alignment="CENTER"
+                              spacing="10"
+                              styleClass="login-card"
+                              maxWidth="220">
+
+                            <Label text="Average Rating"
+                                   style="-fx-text-fill: #bbbbbb;"/>
+                            <Label fx:id="averageRatingLabel"
+                                   style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+                        </VBox>
+
+                    </HBox>
+
+                    <VBox spacing="15"
+                          alignment="CENTER_LEFT"
+                          maxWidth="1100">
+
+                        <Label text="🎬 Your Watched Movies"
+                               style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+                        <ScrollPane hbarPolicy="AS_NEEDED"
+                                    vbarPolicy="NEVER"
+                                    fitToHeight="true"
+                                    style="-fx-background-color: transparent;">
+
+                            <HBox fx:id="watchedMoviesBox"
+                                  spacing="20"
+                                  style="-fx-padding: 20 0 20 0;"/>
+                        </ScrollPane>
+
+                    </VBox>
+
+                </VBox>
+
+            </ScrollPane>
+        </center>
+
+    </BorderPane>
+
+</StackPane>

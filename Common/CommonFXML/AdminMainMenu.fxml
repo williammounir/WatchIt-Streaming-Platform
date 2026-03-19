@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="UI.Common.CommonControllers.AdminMainMenuController"
+           stylesheets="@/Styles/admin-login.css">
+
+    <BorderPane prefWidth="Infinity" prefHeight="Infinity">
+
+
+        <top>
+            <HBox spacing="20"
+                  alignment="CENTER_RIGHT"
+                  style="-fx-background-color: #0f0f14;">
+                <padding>
+                    <Insets top="15" right="15" bottom="15" left="15"/>
+                </padding>
+
+                <Label text="Admin:"
+                       style="-fx-text-fill: #888; -fx-font-size: 14px;"/>
+
+                <Label fx:id="lblAdminName"
+                       style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <Label fx:id="lblDate"
+                       style="-fx-text-fill: #bbbbbb; -fx-font-size: 14px;"/>
+
+                <Button text="Log Out"
+                        styleClass="top-bar-red-button"
+                        onAction="#handleLogout"/>
+            </HBox>
+        </top>
+
+        <left>
+            <VBox spacing="15"
+                  style="-fx-background-color: #0f0f14;"
+                  prefWidth="250"
+                  alignment="TOP_CENTER">
+                <padding>
+                    <Insets top="25" right="25" bottom="25" left="25"/>
+                </padding>
+
+                <Label text="ADMIN PANEL"
+                       styleClass="subtitle-label"/>
+
+                <Separator />
+
+                <Button text="Manage Admins"
+                        styleClass="menu-button"
+                        maxWidth="200"
+                        onAction="#handleManageAdmins"/>
+
+                <Button text="Manage Cast"
+                        styleClass="menu-button"
+                        maxWidth="200"
+                        onAction="#handleManageCast"/>
+
+                <Button text="Manage Directors"
+                        styleClass="menu-button"
+                        maxWidth="200"
+                        onAction="#handleManageDirectors"/>
+
+                <Button text="Manage Movies"
+                        styleClass="menu-button"
+                        maxWidth="200"
+                        onAction="#handleManageMovies"/>
+
+                <Button text="Monthly Revenue"
+                        styleClass="menu-button"
+                        maxWidth="200"
+                        onAction="#handleShowRevenue"/>
+
+                <Button text="System Statistics"
+                        styleClass="menu-button"
+                        maxWidth="200"
+                        onAction="#handleSystemStatistics"/>
+
+                <Button text="User Suspension"
+                        styleClass="menu-button"
+                        maxWidth="200"
+                        onAction="#handleUserSuspension"/>
+
+                <Button text="Admins Activity Log"
+                        styleClass="menu-button"
+                        maxWidth="200"
+                        onAction="#handleAdminsActivityLog"/>
+            </VBox>
+        </left>
+
+        <!-- ===== CENTER ===== -->
+        <center>
+            <StackPane fx:id="contentArea"
+                       styleClass="content-container">
+
+                <VBox alignment="CENTER" spacing="15">
+                    <Label text="Welcome to Admin Dashboard"
+                           styleClass="subtitle-label"/>
+                    <Label text="Select an option from the sidebar"
+                           style="-fx-text-fill: #888; -fx-font-size: 16px;"/>
+                </VBox>
+
+            </StackPane>
+        </center>
+
+    </BorderPane>
+</StackPane>

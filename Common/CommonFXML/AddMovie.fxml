@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="UI.Common.CommonControllers.AddMovieController"
+            stylesheets="@/Styles/admin-login.css">
+
+    <top>
+        <HBox alignment="CENTER_RIGHT"
+              spacing="20"
+              style="-fx-background-color:#0f0f14;">
+
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button text="Back"
+                    styleClass="menu-button"
+                    onAction="#handleBack"/>
+        </HBox>
+    </top>
+
+    <center>
+
+        <ScrollPane fitToWidth="true"
+                    style="-fx-background:#111827;">
+
+            <VBox spacing="25"
+                  alignment="TOP_CENTER"
+                  style="-fx-background-color:#111827;">
+
+                <padding>
+                    <Insets top="30" bottom="40"/>
+                </padding>
+
+                <Label text="Add Movie"
+                       style="-fx-text-fill:white;
+                              -fx-font-size:28;
+                              -fx-font-weight:bold;"/>
+
+                <!-- BASIC INFO -->
+                <TitledPane text="Basic Information" expanded="true">
+
+                    <GridPane hgap="15" vgap="15">
+
+                        <padding>
+                            <Insets top="15" left="15" bottom="15"/>
+                        </padding>
+
+                        <Label text="Movie ID:" style="-fx-text-fill:white;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="idField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Title:" style="-fx-text-fill:white;" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="titleField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="Release Date:" style="-fx-text-fill:white;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <DatePicker fx:id="releaseDatePicker" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                        <Label text="Duration:" style="-fx-text-fill:white;" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <TextField fx:id="durationField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                        <Label text="Director ID:" style="-fx-text-fill:white;" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <TextField fx:id="directorField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                        <Label text="Country:" style="-fx-text-fill:white;" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                        <TextField fx:id="countryField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                    </GridPane>
+
+                </TitledPane>
+
+                <TitledPane text="Financial Information">
+
+                    <GridPane hgap="15" vgap="15">
+
+                        <padding>
+                            <Insets top="15" left="15" bottom="15"/>
+                        </padding>
+
+                        <Label text="Budget:" style="-fx-text-fill:white;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="budgetField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Revenue:" style="-fx-text-fill:white;" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="revenueField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="Rating:" style="-fx-text-fill:white;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <TextField fx:id="ratingField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                    </GridPane>
+
+                </TitledPane>
+
+                <TitledPane text="Movie Description">
+
+                    <VBox spacing="10">
+
+                        <padding>
+                            <Insets top="15" right="15" bottom="15" left="15"/>
+                        </padding>
+
+                        <TextArea fx:id="descriptionArea"
+                                  wrapText="true"
+                                  prefHeight="120"/>
+
+                    </VBox>
+
+                </TitledPane>
+
+                <TitledPane text="Media Files">
+
+                    <VBox spacing="15">
+
+                        <padding>
+                            <Insets top="15" right="15" bottom="15" left="15"/>
+                        </padding>
+
+                        <HBox spacing="10">
+
+                            <TextField fx:id="posterPathField"
+                                       promptText="Poster Path"
+                                       prefWidth="350"/>
+
+                            <Button text="Browse Poster"
+                                    onAction="#handleBrowsePoster"/>
+
+                        </HBox>
+
+                        <ImageView fx:id="posterPreview"
+                                   fitHeight="180"
+                                   preserveRatio="true"/>
+
+                        <HBox spacing="10">
+
+                            <TextField fx:id="videoPathField"
+                                       promptText="Video Path"
+                                       prefWidth="350"/>
+
+                            <Button text="Browse Video"
+                                    onAction="#handleBrowseVideo"/>
+
+                        </HBox>
+
+                    </VBox>
+
+                </TitledPane>
+
+
+                <TitledPane text="Relations">
+
+                    <GridPane hgap="20" vgap="15">
+
+                        <padding>
+                            <Insets top="15" left="15" bottom="15"/>
+                        </padding>
+
+                        <Label text="Cast IDs:" style="-fx-text-fill:white;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="castField"
+                                   promptText="C1,C2,C3"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Languages:" style="-fx-text-fill:white;" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="languagesField"
+                                   promptText="English,Arabic"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Genres:" style="-fx-text-fill:white;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+
+                        <FlowPane hgap="10"
+                                  vgap="10"
+                                  GridPane.rowIndex="2"
+                                  GridPane.columnIndex="1">
+
+                            <CheckBox text="Action" fx:id="genreAction"/>
+                            <CheckBox text="Drama" fx:id="genreDrama"/>
+                            <CheckBox text="Comedy" fx:id="genreComedy"/>
+                            <CheckBox text="SciFi" fx:id="genreSciFi"/>
+                            <CheckBox text="Horror" fx:id="genreHorror"/>
+
+                        </FlowPane>
+
+                    </GridPane>
+
+                </TitledPane>
+
+                <!-- SAVE BUTTON -->
+                <Button text="Add Movie"
+                        styleClass="menu-button"
+                        prefWidth="220"
+                        prefHeight="45"
+                        onAction="#handleSaveMovie"/>
+
+            </VBox>
+
+        </ScrollPane>
+
+    </center>
+
+</BorderPane>

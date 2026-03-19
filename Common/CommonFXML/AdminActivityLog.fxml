@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="UI.Common.CommonControllers.AdminActivityLogController"
+            stylesheets="@/Styles/admin-login.css"
+            style="-fx-background-color:#111827;">
+
+
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding:20;">
+            <Label text="Admins Activity Log"
+                   styleClass="subtitle-label"/>
+
+            <Label fx:id="lblDate"
+                   style="-fx-text-fill:#aaaaaa; -fx-font-size:14px;"/>
+        </VBox>
+    </top>
+
+
+    <center>
+
+        <VBox spacing="20" alignment="CENTER" style="-fx-padding:20;">
+
+            <TableView fx:id="logsTable"
+                       prefHeight="500"
+                       prefWidth="1000">
+
+                <columns>
+
+                    <TableColumn fx:id="colLogID"
+                                 text="Log ID"
+                                 prefWidth="80"/>
+
+                    <TableColumn fx:id="colSession"
+                                 text="Session"
+                                 prefWidth="100"/>
+
+                    <TableColumn fx:id="colTime"
+                                 text="Time"
+                                 prefWidth="180"/>
+
+                    <TableColumn fx:id="colAdmin"
+                                 text="Admin"
+                                 prefWidth="90"/>
+
+                    <TableColumn fx:id="colAction"
+                                 text="Action"
+                                 prefWidth="150"/>
+
+                    <TableColumn fx:id="colTarget"
+                                 text="Target"
+                                 prefWidth="110"/>
+
+                    <TableColumn fx:id="colTargetID"
+                                 text="Target ID"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="colDescription"
+                                 text="Description"
+                                 prefWidth="300"/>
+
+                </columns>
+
+            </TableView>
+
+            <Label fx:id="lblTotalLogs"
+                   style="-fx-text-fill:white; -fx-font-size:14px;"/>
+
+            <HBox spacing="15" alignment="CENTER">
+
+                <Button text="Refresh"
+                        styleClass="menu-button"
+                        onAction="#onRefresh"/>
+
+                <Button text="Back"
+                        styleClass="menu-button"
+                        onAction="#onBack"/>
+
+            </HBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>
