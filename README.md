@@ -77,14 +77,28 @@ This reflects how real-world systems evolve over time.
 👉 (Add your demo video link here after uploading)
 
 ## 📸 Screenshots
+### Main Screen
+![Main Screen](resources/screenshots/Main.png)
 ### Login Screen
 ![Login Screen](resources/screenshots/Login.png)
-
+### Dashboard
+![Dashboard](resources/screenshots/Dashboard.png)
 ### Movie Browser
-![Movie Browser](resources/screenshots/movie_browser.png)
-
+![Movie Browser](resources/screenshots/Search.png)
+### Movie Card
+![Movie Card](resources/screenshots/MovieCard.png)
+### Ratting
+![Ratting](resources/screenshots/Ratting.png)
 ### Admin Dashboard
-![Admin Dashboard](resources/screenshots/admin_dashboard.png)
+![Admin Dashboard](resources/screenshots/AdminMenu.png)
+### Adding Movie
+![Adding Movie](resources/screenshots/AddingMovie.png)
+### System Analysis
+![System Andalysis](resources/screenshots/Analysis.png)
+### Activity Log
+![Activity Log](resources/screenshots/Activity.png)
+### Suspention
+![Suspention](resources/screenshots/Suspention.png)
 ---
 
 ## 📂 Project Structure
