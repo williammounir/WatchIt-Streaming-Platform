@@ -76,6 +76,15 @@ This reflects how real-world systems evolve over time.
 ## 🎥 Demo
 👉 (Add your demo video link here after uploading)
 
+## 📸 Screenshots
+### Login Screen
+![Login Screen](resources/screenshots/login.png)
+
+### Movie Browser
+![Movie Browser](resources/screenshots/movie_browser.png)
+
+### Admin Dashboard
+![Admin Dashboard](resources/screenshots/admin_dashboard.png)
 ---
 
 ## 📂 Project Structure
