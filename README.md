@@ -78,7 +78,7 @@ This reflects how real-world systems evolve over time.
 
 ## 📸 Screenshots
 ### Login Screen
-![Login Screen](resources/screenshots/login.png)
+![Login Screen](resources/screenshots/Login.png)
 
 ### Movie Browser
 ![Movie Browser](resources/screenshots/movie_browser.png)
