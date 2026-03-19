@@ -1,106 +1,84 @@
-🎬 WatchIt – Desktop Streaming Platform
-📌 Overview
+# 🎬 WatchIt – Desktop Streaming Platform
 
+## 📌 Overview
 WatchIt is a desktop streaming platform built using Java that simulates a real-world system with both user and admin functionalities.
 
 The project was not only about building features, but about progressively evolving the system architecture:
 
-Starting with file-based storage
-
-Moving to a MySQL database
-
-Finally building a full GUI using JavaFX
+- Starting with file-based storage  
+- Moving to a MySQL database  
+- Finally building a full GUI using JavaFX  
 
 This approach helped in understanding how real applications grow and scale over time.
 
-🚀 Features
-👤 User Features
+---
 
-User authentication (Login / Sign Up / Subscription renewal)
+## 🚀 Features
 
-Browse movies by categories (Top Rated, Recent, etc.)
+### 👤 User Features
+- User authentication (Login / Sign Up / Subscription renewal)  
+- Browse movies by categories (Top Rated, Recent, etc.)  
+- Search and filter movies (by name, genre, language, rating)  
+- Watch movies and rate them  
+- Profile system:  
+  - Track watched movies  
+  - Favorite genre  
+  - Average rating  
+  - Subscription management  
+  - Suspension handling (with reason and duration)  
 
-Search and filter movies (by name, genre, language, rating)
+### 🛠️ Admin Features
+- Secure admin authentication  
+- Full CRUD operations:  
+  - Movies  
+  - Directors  
+  - Cast  
+- User management (suspend / unsuspend users)  
+- System statistics dashboard  
+- Monthly revenue tracking  
+- Admin activity logging (stored in database)  
 
-Watch movies and rate them
+---
 
-Profile system:
-
-Track watched movies
-
-Favorite genre
-
-Average rating
-
-Subscription management
-
-Suspension handling (with reason and duration)
-
-🛠️ Admin Features
-
-Secure admin authentication
-
-Full CRUD operations:
-
-Movies
-
-Directors
-
-Cast
-
-User management (suspend / unsuspend users)
-
-System statistics dashboard
-
-Monthly revenue tracking
-
-Admin activity logging (stored in database)
-
-🧠 Architecture & Design
-
+## 🧠 Architecture & Design
 This project focuses on applying clean design principles:
 
-Separation between UI and business logic
+- Separation between UI and business logic  
+- Feature-based modular structure  
+- Each class/function has a single responsibility  
 
-Feature-based modular structure
+**Key Concepts Applied:**
+- Separation of Concerns  
+- Single Responsibility Principle  
+- Modular Design  
 
-Each class/function has a single responsibility
+---
 
-Key Concepts Applied:
+## 🛠️ Tech Stack
+- **Language:** Java (OOP)  
+- **GUI:** JavaFX  
+- **Database:** MySQL  
+- **Database Connectivity:** JDBC  
 
-Separation of Concerns
+---
 
-Single Responsibility Principle
-
-Modular Design
-
-🛠️ Tech Stack
-
-Language: Java (OOP)
-
-GUI: JavaFX
-
-Database: MySQL
-
-Database Connectivity: JDBC
-
-🔄 Project Evolution
-
+## 🔄 Project Evolution
 One of the main goals of this project was continuous improvement:
 
-Phase 1: File-based system (initial implementation)
-
-Phase 2: Database integration using MySQL
-
-Phase 3: Full GUI development using JavaFX
+- **Phase 1:** File-based system (initial implementation)  
+- **Phase 2:** Database integration using MySQL  
+- **Phase 3:** Full GUI development using JavaFX  
 
 This reflects how real-world systems evolve over time.
 
-🎥 Demo
+---
 
+## 🎥 Demo
 👉 (Add your demo video link here after uploading)
 
-📂 Project Structure
+---
+
+## 📂 Project Structure
 WatchIt/
 │── src/
 │   ├── ui/              # JavaFX UI components
@@ -113,36 +91,33 @@ WatchIt/
 │   ├── fxml/            # JavaFX layouts
 │
 │── README.md
-⚙️ How to Run
 
-Clone the repository:
 
-git clone https://github.com/your-username/WatchIt-Desktop-App.git
+## ⚙️ How to Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/WatchIt-Desktop-App.git
+2. Open the project in your IDE (IntelliJ / Eclipse)
 
-Open the project in your IDE (IntelliJ / Eclipse)
+3. Set up MySQL:
 
-Set up MySQL:
+- **Create the database
 
-Create the database
+- **Import the required tables (if applicable)
+4. Run the application:
 
-Import the required tables (if applicable)
+- **Launch the main JavaFX file
 
-Run the application:
+What I Learned
+- **How to design and structure a scalable application
 
-Launch the main JavaFX file
+- **Transitioning from file-based systems to databases
 
-💡 What I Learned
+- **Building desktop GUIs using JavaFX
 
-How to design and structure a scalable application
+- **Managing complexity as the project grows
 
-Transitioning from file-based systems to databases
+- **Thinking in terms of systems, not just code
 
-Building desktop GUIs using JavaFX
-
-Managing complexity as the project grows
-
-Thinking in terms of systems, not just code
-
-🤝 Feedback
-
+## 🤝 Feedback
 I’d really appreciate any feedback or suggestions!
