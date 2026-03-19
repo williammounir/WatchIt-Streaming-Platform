@@ -1,4 +1,9 @@
 # 🎬 WatchIt – Desktop Streaming Platform
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![JavaFX](https://img.shields.io/badge/JavaFX-3776AB?style=for-the-badge&logo=openjdk&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![License](https://img.shields.io/github/license/williammounir/WatchIt-Streaming-Platform)
+![Stars](https://img.shields.io/github/stars/williammounir/WatchIt-Streaming-Platform?style=social)
 
 ## 📌 Overview
 WatchIt is a desktop streaming platform built using Java that simulates a real-world system with both user and admin functionalities.
@@ -74,7 +79,7 @@ This reflects how real-world systems evolve over time.
 ---
 
 ## 🎥 Demo
-👉 (Add your demo video link here after uploading)
+👉 https://drive.google.com/drive/folders/1lTZSvmfIX4uF39kjiduTVhHYFx7Zurem?usp=drive_link
 
 ## 📸 Screenshots
 ### Main Screen
@@ -119,7 +124,7 @@ WatchIt/
 ## ⚙️ How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/WatchIt-Desktop-App.git
+   git clone https://github.com/williammounir/WatchIt-Streaming-Platform
 2. Open the project in your IDE (IntelliJ / Eclipse)
 
 3. Set up MySQL:
